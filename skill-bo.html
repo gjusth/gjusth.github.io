@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BusinessObjects — Gergely Justh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav id="nav" class="scrolled">
+  <div class="wrap">
+    <a class="logo" href="index.html"><b>&gt;</b> justh.net</a>
+    <div class="nav-links">
+      <a href="index.html#about" data-i18n="nav.about">About</a>
+      <a href="index.html#skills" data-i18n="nav.skills">Skillset</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="index.html#clients" data-i18n="nav.clients">Clients</a>
+      <a class="btn" href="mailto:gjusth@gmail.com" data-i18n="nav.cta">Get in touch</a>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="hu">HU</button>
+    </div>
+  </div>
+</nav>
+
+<div class="subhero">
+  <div class="wrap">
+    <a class="back-link" href="index.html#skills" data-i18n="sub.back">Back to overview</a>
+    <br>
+    <span class="eyebrow" data-i18n="sub.eyebrow">Skillset</span>
+    <h1 data-i18n="s.title">BusinessObjects</h1>
+    <p class="lede" data-i18n="s.lede">The complete BusinessObjects platform — semantic layers, operational reporting, and dashboards that executives actually open.</p>
+    <div class="tags"><span>BICS</span><span>Universe (UNX)</span><span>WEBI</span><span>Crystal Reports</span><span>Xcelsius</span><span>LiveOffice</span><span>Advanced Analysis</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <figure class="diagram-card reveal">
+    <svg viewBox="0 0 940 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BusinessObjects platform stack">
+<defs>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7686A0"/></marker>
+<marker id="arrA" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1E4FDB"/></marker>
+</defs>
+<rect x="160" y="230" width="620" height="60" rx="10" class="dg-box"/><text x="470" y="255" class="dg-title" text-anchor="middle">DATA LAYER</text><text x="470" y="276" class="dg-label-soft" text-anchor="middle">SAP BW queries · HANA views · relational sources</text>
+<path class="dg-arrow-accent" d="M470,230 V190"/>
+<rect x="160" y="130" width="300" height="60" rx="10" class="dg-box-accent"/><text x="310" y="155" class="dg-title" text-anchor="middle">BICS</text><text x="310" y="176" class="dg-label-accent" text-anchor="middle">direct BW query connectivity</text>
+<rect x="480" y="130" width="300" height="60" rx="10" class="dg-box-accent"/><text x="630" y="155" class="dg-title" text-anchor="middle">UNIVERSE (UNX)</text><text x="630" y="176" class="dg-label-accent" text-anchor="middle">governed semantic layer</text>
+<path class="dg-arrow-accent" d="M310,130 V95"/>
+<path class="dg-arrow-accent" d="M630,130 V95"/>
+<rect x="120" y="35" width="170" height="60" rx="10" class="dg-box"/><text x="205" y="60" class="dg-title" text-anchor="middle">WEBI</text><text x="205" y="81" class="dg-label-soft" text-anchor="middle">self-service</text>
+<rect x="300" y="35" width="170" height="60" rx="10" class="dg-box"/><text x="385" y="60" class="dg-title" text-anchor="middle">CRYSTAL</text><text x="385" y="81" class="dg-label-soft" text-anchor="middle">pixel-perfect</text>
+<rect x="480" y="35" width="170" height="60" rx="10" class="dg-box"/><text x="565" y="60" class="dg-title" text-anchor="middle">ANALYSIS</text><text x="565" y="81" class="dg-label-soft" text-anchor="middle">OLAP · Office</text>
+<rect x="660" y="35" width="170" height="60" rx="10" class="dg-box"/><text x="745" y="60" class="dg-title" text-anchor="middle">DASHBOARDS</text><text x="745" y="81" class="dg-label-soft" text-anchor="middle">Xcelsius → SAC</text>
+</svg>
+    <figcaption data-i18n="s.cap">The BO platform stack: one data truth, one semantic layer, the right client per audience.</figcaption>
+  </figure>
+
+  <div class="content-blocks">
+    <div class="content-block reveal">
+      <div class="num">01</div>
+      <h3 data-i18n="s.b1t">The semantic layer</h3>
+      <p data-i18n="s.b1p">Universes and BICS connectivity turn a data warehouse into a self-service platform: business-friendly names, governed calculations and one version of the truth for every client tool.</p>
+    </div>
+    <div class="content-block reveal d1">
+      <div class="num">02</div>
+      <h3 data-i18n="s.b2t">Operational reporting</h3>
+      <p data-i18n="s.b2p">WEBI and Crystal Reports for scheduled, pixel-perfect and compliance-grade output — as with the GxP-relevant LIMS quality reporting I built at Sandoz.</p>
+    </div>
+    <div class="content-block reveal">
+      <div class="num">03</div>
+      <h3 data-i18n="s.b3t">Dashboards &amp; beyond</h3>
+      <p data-i18n="s.b3p">More than ten Xcelsius executive dashboards with full financial scope at Sandoz — and the migration paths onward when a platform moves to QlikSense or SAC.</p>
+    </div>
+    <div class="content-block full reveal d1">
+      <div class="num">04</div>
+      <h3 data-i18n="s.b4t">Platform thinking</h3>
+      <p data-i18n="s.b4p">BusinessObjects is strongest as part of a whole: BICS on BW queries, LiveOffice inside workbooks, Advanced Analysis for OLAP — each component used exactly where it earns its place.</p>
+    </div>
+  </div>
+
+  <div class="sub-cta">
+    <a class="btn" href="mailto:gjusth@gmail.com" data-i18n="sub.cta1">Discuss your project</a>
+    <a class="btn ghost" href="index.html#skills" data-i18n="sub.cta2">All skills</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Gergely Justh · justh.net</span>
+    <span>SAP BI · BW/4HANA · Planning · BusinessObjects</span>
+  </div>
+</footer>
+
+<script>
+window.I18N = {
+"en": {},
+"de": {
+"nav.about": "Über mich",
+"nav.skills": "Kompetenzen",
+"nav.projects": "Projekte",
+"nav.clients": "Referenzen",
+"nav.cta": "Kontakt aufnehmen",
+"sub.back": "Zurück zur Übersicht",
+"sub.eyebrow": "Kompetenzen",
+"sub.cta1": "Projekt besprechen",
+"sub.cta2": "Alle Kompetenzen",
+"s.title": "BusinessObjects",
+"s.lede": "Die komplette BusinessObjects-Plattform – semantische Schichten, operatives Reporting und Dashboards, die das Management tatsächlich öffnet.",
+"s.cap": "Der BO-Plattform-Stack: eine Datenwahrheit, eine semantische Schicht, der passende Client je Zielgruppe.",
+"s.b1t": "Die semantische Schicht",
+"s.b1p": "Universes und BICS-Konnektivität machen aus einem Data Warehouse eine Self-Service-Plattform: fachliche Bezeichnungen, kontrollierte Berechnungen und eine Version der Wahrheit für jedes Client-Werkzeug.",
+"s.b2t": "Operatives Reporting",
+"s.b2p": "WEBI und Crystal Reports für terminiertes, pixelgenaues und compliance-taugliches Reporting – wie beim GxP-relevanten LIMS-Qualitätsreporting, das ich bei Sandoz aufgebaut habe.",
+"s.b3t": "Dashboards und mehr",
+"s.b3p": "Über zehn Xcelsius-Management-Dashboards mit vollem Finanzumfang bei Sandoz – und die Migrationspfade weiter, wenn eine Plattform zu QlikSense oder SAC wechselt.",
+"s.b4t": "Plattform-Denken",
+"s.b4p": "BusinessObjects ist am stärksten als Teil eines Ganzen: BICS auf BW-Queries, LiveOffice in Workbooks, Advanced Analysis für OLAP – jede Komponente genau dort, wo sie ihren Platz verdient."
+},
+"hu": {
+"nav.about": "Rólam",
+"nav.skills": "Szakterületek",
+"nav.projects": "Projektek",
+"nav.clients": "Ügyfelek",
+"nav.cta": "Kapcsolatfelvétel",
+"sub.back": "Vissza az áttekintéshez",
+"sub.eyebrow": "Szakterületek",
+"sub.cta1": "Beszéljünk a projektjéről",
+"sub.cta2": "Összes szakterület",
+"s.title": "BusinessObjects",
+"s.lede": "A teljes BusinessObjects-platform – szemantikus rétegek, operatív riporting és olyan dashboardok, amelyeket a vezetők valóban megnyitnak.",
+"s.cap": "A BO-platform rétegei: egyetlen adatigazság, egyetlen szemantikus réteg, célközönségenként a megfelelő kliens.",
+"s.b1t": "A szemantikus réteg",
+"s.b1p": "A universe-ök és a BICS-kapcsolat önkiszolgáló platformmá teszik az adattárházat: üzleti elnevezések, kontrollált számítások és az igazság egyetlen verziója minden klienseszköz számára.",
+"s.b2t": "Operatív riporting",
+"s.b2p": "WEBI és Crystal Reports az ütemezett, pixelpontos és megfelelőségi szintű riportinghoz – ahogy a Sandoznál épített, GxP-releváns LIMS minőségi riportingnál.",
+"s.b3t": "Dashboardok és tovább",
+"s.b3p": "Több mint tíz Xcelsius vezetői dashboard teljes pénzügyi lefedettséggel a Sandoznál – és a továbblépési utak, amikor egy platform QlikSense-re vagy SAC-ra vált.",
+"s.b4t": "Platformszemlélet",
+"s.b4p": "A BusinessObjects egy egész részeként a legerősebb: BICS a BW-lekérdezéseken, LiveOffice a munkafüzetekben, Advanced Analysis az OLAP-hoz – minden komponens pontosan ott, ahol kiérdemli a helyét."
+}
+};
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>
