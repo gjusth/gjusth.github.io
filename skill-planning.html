@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planning — Gergely Justh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav id="nav" class="scrolled">
+  <div class="wrap">
+    <a class="logo" href="index.html"><b>&gt;</b> justh.net</a>
+    <div class="nav-links">
+      <a href="index.html#about" data-i18n="nav.about">About</a>
+      <a href="index.html#skills" data-i18n="nav.skills">Skillset</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="index.html#clients" data-i18n="nav.clients">Clients</a>
+      <a class="btn" href="mailto:gjusth@gmail.com" data-i18n="nav.cta">Get in touch</a>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="hu">HU</button>
+    </div>
+  </div>
+</nav>
+
+<div class="subhero">
+  <div class="wrap">
+    <a class="back-link" href="index.html#skills" data-i18n="sub.back">Back to overview</a>
+    <br>
+    <span class="eyebrow" data-i18n="sub.eyebrow">Skillset</span>
+    <h1 data-i18n="s.title">Planning</h1>
+    <p class="lede" data-i18n="s.lede">Integrated planning applications where numbers flow in a closed loop — actuals in, targets down, plans up, consolidation out.</p>
+    <div class="tags"><span>BI-IP</span><span>BW-BPS</span><span>BPC</span><span>FOX</span><span>Characteristic relations</span><span>Locking concept</span><span>Retraction</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <figure class="diagram-card reveal">
+    <svg viewBox="0 0 940 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Closed planning loop">
+<defs>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7686A0"/></marker>
+<marker id="arrA" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1E4FDB"/></marker>
+</defs>
+<rect x="60" y="40" width="200" height="80" rx="10" class="dg-box"/><text x="160" y="73" class="dg-title" text-anchor="middle">ACTUALS</text><text x="160" y="96" class="dg-label-soft" text-anchor="middle">data warehouse · BW</text>
+<path class="dg-arrow-accent" d="M260,80 H400"/>
+<rect x="400" y="40" width="200" height="80" rx="10" class="dg-box-accent"/><text x="500" y="73" class="dg-title" text-anchor="middle">TOP-DOWN TARGETS</text><text x="500" y="96" class="dg-label-accent" text-anchor="middle">management input</text>
+<path class="dg-arrow-accent" d="M600,80 H740"/>
+<rect x="740" y="40" width="180" height="80" rx="10" class="dg-box"/><text x="830" y="73" class="dg-title" text-anchor="middle">BOTTOM-UP ENTRY</text><text x="830" y="96" class="dg-label-soft" text-anchor="middle">input-ready queries</text>
+<path class="dg-arrow-accent" d="M830,120 V210"/>
+<rect x="740" y="210" width="180" height="80" rx="10" class="dg-box-accent"/><text x="830" y="243" class="dg-title" text-anchor="middle">LOGIC &amp; VALIDATION</text><text x="830" y="266" class="dg-label-accent" text-anchor="middle">FOX · exits · locking</text>
+<path class="dg-arrow-accent" d="M740,250 H600"/>
+<rect x="400" y="210" width="200" height="80" rx="10" class="dg-box"/><text x="500" y="243" class="dg-title" text-anchor="middle">CONSOLIDATION</text><text x="500" y="266" class="dg-label-soft" text-anchor="middle">retraction · BCS / group</text>
+<path class="dg-arrow-accent" d="M400,250 H160 V120"/>
+<text x="470" y="325" class="dg-label-soft" text-anchor="middle">one closed loop — actuals in, plans out, no offline Excel islands</text>
+</svg>
+    <figcaption data-i18n="s.cap">The closed planning loop: no offline Excel islands, one governed data model.</figcaption>
+  </figure>
+
+  <div class="content-blocks">
+    <div class="content-block reveal">
+      <div class="num">01</div>
+      <h3 data-i18n="s.b1t">From BPS to today</h3>
+      <p data-i18n="s.b1p">I've implemented every SAP planning generation — SEM-BPS, BW-BPS, BI-IP and BPC — and apply that depth to modern BW/4HANA-based planning and SAC Planning architectures.</p>
+    </div>
+    <div class="content-block reveal d1">
+      <div class="num">02</div>
+      <h3 data-i18n="s.b2t">Logic in FOX and ABAP</h3>
+      <p data-i18n="s.b2p">Distributions, currency translation, performance-fee calculation, tax-driven cost allocation: complex planning logic implemented in FOX formulas and ABAP exits — most recently for Stada's group planning tools.</p>
+    </div>
+    <div class="content-block reveal">
+      <div class="num">03</div>
+      <h3 data-i18n="s.b3t">Governance built in</h3>
+      <p data-i18n="s.b3p">Characteristic relations, locking concepts, status-and-tracking systems: planning applications where users can only enter what is valid, on exactly the data slice that is theirs.</p>
+    </div>
+    <div class="content-block full reveal d1">
+      <div class="num">04</div>
+      <h3 data-i18n="s.b4t">Proven across industries</h3>
+      <p data-i18n="s.b4p">Enterprise-wide insurance planning at Generali (balance sheet, P&amp;L, actuarial, liquidity), assortment planning at Neckermann, cost-center planning at Framatome, molecule launch planning at Sandoz.</p>
+    </div>
+  </div>
+
+  <div class="sub-cta">
+    <a class="btn" href="mailto:gjusth@gmail.com" data-i18n="sub.cta1">Discuss your project</a>
+    <a class="btn ghost" href="index.html#skills" data-i18n="sub.cta2">All skills</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Gergely Justh · justh.net</span>
+    <span>SAP BI · BW/4HANA · Planning · BusinessObjects</span>
+  </div>
+</footer>
+
+<script>
+window.I18N = {
+"en": {},
+"de": {
+"nav.about": "Über mich",
+"nav.skills": "Kompetenzen",
+"nav.projects": "Projekte",
+"nav.clients": "Referenzen",
+"nav.cta": "Kontakt aufnehmen",
+"sub.back": "Zurück zur Übersicht",
+"sub.eyebrow": "Kompetenzen",
+"sub.cta1": "Projekt besprechen",
+"sub.cta2": "Alle Kompetenzen",
+"s.title": "Planung",
+"s.lede": "Integrierte Planungsanwendungen, in denen die Zahlen in einem geschlossenen Kreislauf fließen – Ist-Daten hinein, Ziele hinunter, Pläne hinauf, Konsolidierung hinaus.",
+"s.cap": "Der geschlossene Planungskreislauf: keine Offline-Excel-Inseln, ein kontrolliertes Datenmodell.",
+"s.b1t": "Von BPS bis heute",
+"s.b1p": "Ich habe jede SAP-Planungsgeneration implementiert – SEM-BPS, BW-BPS, BI-IP und BPC – und bringe diese Tiefe in moderne BW/4HANA-basierte Planung und SAC-Planning-Architekturen ein.",
+"s.b2t": "Logik in FOX und ABAP",
+"s.b2p": "Verteilungen, Währungsumrechnung, Performance-Fee-Berechnung, steuergetriebene Kostenallokation: komplexe Planungslogik in FOX-Formeln und ABAP-Exits – zuletzt für die Konzernplanungswerkzeuge von Stada.",
+"s.b3t": "Governance von Anfang an",
+"s.b3p": "Merkmalsbeziehungen, Sperrkonzepte, Status- und Tracking-Systeme: Planungsanwendungen, in denen Anwender nur eingeben können, was gültig ist – und nur auf dem Datenausschnitt, der ihnen gehört.",
+"s.b4t": "Branchenübergreifend bewährt",
+"s.b4p": "Unternehmensweite Versicherungsplanung bei Generali (Bilanz, GuV, Aktuariat, Liquidität), Sortimentsplanung bei Neckermann, Kostenstellenplanung bei Framatome, Molecule-Launch-Planung bei Sandoz."
+},
+"hu": {
+"nav.about": "Rólam",
+"nav.skills": "Szakterületek",
+"nav.projects": "Projektek",
+"nav.clients": "Ügyfelek",
+"nav.cta": "Kapcsolatfelvétel",
+"sub.back": "Vissza az áttekintéshez",
+"sub.eyebrow": "Szakterületek",
+"sub.cta1": "Beszéljünk a projektjéről",
+"sub.cta2": "Összes szakterület",
+"s.title": "Tervezés",
+"s.lede": "Integrált tervezőalkalmazások, ahol a számok zárt körben áramlanak – tényadatok be, célok le, tervek fel, konszolidáció ki.",
+"s.cap": "A zárt tervezési kör: nincsenek offline Excel-szigetek, egyetlen kontrollált adatmodell van.",
+"s.b1t": "A BPS-től napjainkig",
+"s.b1p": "Minden SAP-tervezési generációt implementáltam – SEM-BPS, BW-BPS, BI-IP és BPC –, és ezt a mélységet viszem be a modern BW/4HANA-alapú tervezésbe és a SAC Planning architektúrákba.",
+"s.b2t": "Logika FOX-ban és ABAP-ban",
+"s.b2p": "Felosztások, devizaátszámítás, sikerdíj-kalkuláció, adószabály-vezérelt költségallokáció: összetett tervezési logika FOX-képletekben és ABAP-exitekben – legutóbb a Stada csoportszintű tervezőeszközeihez.",
+"s.b3t": "Beépített governance",
+"s.b3p": "Jellemzőkapcsolatok, zárolási koncepciók, státusz- és követőrendszerek: olyan tervezőalkalmazások, amelyekben a felhasználók csak érvényes adatot vihetnek fel – és pontosan azon az adatszeleten, amely az övék.",
+"s.b4t": "Iparágakon átívelően bizonyított",
+"s.b4p": "Vállalatszintű biztosítói tervezés a Generalinál (mérleg, eredménykimutatás, aktuárius, likviditás), szortimenttervezés a Neckermann-nál, költséghely-tervezés a Framatome-nál, molekulabevezetési tervezés a Sandoznál."
+}
+};
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>
