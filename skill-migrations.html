@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Migrations &amp; Upgrades — Gergely Justh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav id="nav" class="scrolled">
+  <div class="wrap">
+    <a class="logo" href="index.html"><b>&gt;</b> justh.net</a>
+    <div class="nav-links">
+      <a href="index.html#about" data-i18n="nav.about">About</a>
+      <a href="index.html#skills" data-i18n="nav.skills">Skillset</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="index.html#clients" data-i18n="nav.clients">Clients</a>
+      <a class="btn" href="mailto:gjusth@gmail.com" data-i18n="nav.cta">Get in touch</a>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="hu">HU</button>
+    </div>
+  </div>
+</nav>
+
+<div class="subhero">
+  <div class="wrap">
+    <a class="back-link" href="index.html#skills" data-i18n="sub.back">Back to overview</a>
+    <br>
+    <span class="eyebrow" data-i18n="sub.eyebrow">Skillset</span>
+    <h1 data-i18n="s.title">Migrations &amp; Upgrades</h1>
+    <p class="lede" data-i18n="s.lede">Moving landscapes forward without losing a day of reporting — release upgrades, BW/4HANA conversions and the road to S/4HANA, BDC and DataSphere.</p>
+    <div class="tags"><span>BW/4HANA conversion</span><span>Release upgrades</span><span>S/4HANA</span><span>BDC</span><span>DataSphere</span><span>Cutover planning</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <figure class="diagram-card reveal">
+    <svg viewBox="0 0 940 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Migration path across SAP BI generations">
+<defs>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7686A0"/></marker>
+<marker id="arrA" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1E4FDB"/></marker>
+</defs>
+<rect x="20" y="90" width="150" height="80" rx="10" class="dg-box"/><text x="95" y="122" class="dg-title" text-anchor="middle">BW 3.x</text><text x="95" y="145" class="dg-label-soft" text-anchor="middle">classic · 3.0B–3.5</text>
+<path class="dg-arrow" d="M170,130 H210"/>
+<rect x="210" y="90" width="150" height="80" rx="10" class="dg-box"/><text x="285" y="122" class="dg-title" text-anchor="middle">BI 7.x</text><text x="285" y="145" class="dg-label-soft" text-anchor="middle">7.0–7.5 on HANA</text>
+<path class="dg-arrow-accent" d="M360,130 H400"/>
+<rect x="400" y="90" width="190" height="80" rx="10" class="dg-box-accent"/><text x="495" y="122" class="dg-title" text-anchor="middle">BW/4HANA</text><text x="495" y="145" class="dg-label-accent" text-anchor="middle">conversion · rebuild</text>
+<path class="dg-arrow-accent" d="M590,130 H630"/>
+<rect x="630" y="90" width="290" height="80" rx="10" class="dg-box-dark"/><text x="775" y="122" class="dg-label-light" text-anchor="middle">BDC · DATASPHERE</text><text x="775" y="145" class="dg-label-light" text-anchor="middle">cloud target architecture</text>
+<rect x="400" y="210" width="190" height="60" rx="10" class="dg-box"/><text x="495" y="235" class="dg-title" text-anchor="middle">S/4HANA</text><text x="495" y="255" class="dg-label-soft" text-anchor="middle">new source system</text>
+<path class="dg-arrow-accent" d="M495,210 V174"/>
+<text x="470" y="295" class="dg-label-soft" text-anchor="middle">every hop executed in production — upgrade, convert, re-platform</text>
+</svg>
+    <figcaption data-i18n="s.cap">One continuous path: every generation of SAP BI, migrated in production.</figcaption>
+  </figure>
+
+  <div class="content-blocks">
+    <div class="content-block reveal">
+      <div class="num">01</div>
+      <h3 data-i18n="s.b1t">Strategy before tooling</h3>
+      <p data-i18n="s.b1p">Greenfield, brownfield or shell conversion — the right approach depends on data quality, custom code and the business appetite for change. I assess the landscape first and let the findings pick the strategy, not the other way around.</p>
+    </div>
+    <div class="content-block reveal d1">
+      <div class="num">02</div>
+      <h3 data-i18n="s.b2t">De-risked by design</h3>
+      <p data-i18n="s.b2p">Parallel runs, automated reconciliation reports and a rehearsed cutover plan: migrations are won in the preparation. Business users should notice the improvement — not the migration.</p>
+    </div>
+    <div class="content-block reveal">
+      <div class="num">03</div>
+      <h3 data-i18n="s.b3t">The cloud horizon</h3>
+      <p data-i18n="s.b3p">The current chapter: aligning the move to S/4HANA as the new source system, the upgrade to SAP Business Data Cloud and the preparation of the DataSphere migration — several tracks, one consistent target architecture.</p>
+    </div>
+    <div class="content-block full reveal d1">
+      <div class="num">04</div>
+      <h3 data-i18n="s.b4t">In practice</h3>
+      <p data-i18n="s.b4p">Function-identical BW upgrade at Fővárosi Vízművek (3.1 → 7.0); upgrade and extension at Coop Hungary (3.0B → 3.5); complete BW/4HANA rebuild at Palkeet with aDSOs and CompositeProviders; consolidation of divisional warehouses into the Novartis group data warehouse.</p>
+    </div>
+  </div>
+
+  <div class="sub-cta">
+    <a class="btn" href="mailto:gjusth@gmail.com" data-i18n="sub.cta1">Discuss your project</a>
+    <a class="btn ghost" href="index.html#skills" data-i18n="sub.cta2">All skills</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Gergely Justh · justh.net</span>
+    <span>SAP BI · BW/4HANA · Planning · BusinessObjects</span>
+  </div>
+</footer>
+
+<script>
+window.I18N = {
+"en": {},
+"de": {
+"nav.about": "Über mich",
+"nav.skills": "Kompetenzen",
+"nav.projects": "Projekte",
+"nav.clients": "Referenzen",
+"nav.cta": "Kontakt aufnehmen",
+"sub.back": "Zurück zur Übersicht",
+"sub.eyebrow": "Kompetenzen",
+"sub.cta1": "Projekt besprechen",
+"sub.cta2": "Alle Kompetenzen",
+"s.title": "Migrationen &amp; Upgrades",
+"s.lede": "Landschaften weiterbewegen, ohne einen Tag Reporting zu verlieren – Release-Upgrades, BW/4HANA-Konvertierungen und der Weg zu S/4HANA, BDC und DataSphere.",
+"s.cap": "Ein durchgehender Pfad: jede Generation von SAP BI, produktiv migriert.",
+"s.b1t": "Strategie vor Werkzeug",
+"s.b1p": "Greenfield, Brownfield oder Shell-Konvertierung – der richtige Ansatz hängt von Datenqualität, Eigenentwicklungen und der Veränderungsbereitschaft des Business ab. Ich analysiere zuerst die Landschaft und lasse die Ergebnisse die Strategie bestimmen – nicht umgekehrt.",
+"s.b2t": "Risikominimierung von Anfang an",
+"s.b2p": "Parallelbetrieb, automatisierte Abstimmberichte und ein geprobter Cutover-Plan: Migrationen werden in der Vorbereitung gewonnen. Die Fachbereiche sollen die Verbesserung bemerken – nicht die Migration.",
+"s.b3t": "Der Cloud-Horizont",
+"s.b3p": "Das aktuelle Kapitel: die Abstimmung des Umstiegs auf S/4HANA als neues Quellsystem, das Upgrade auf SAP Business Data Cloud und die Vorbereitung der DataSphere-Migration – mehrere Stränge, eine konsistente Zielarchitektur.",
+"s.b4t": "In der Praxis",
+"s.b4p": "Funktionsidentisches BW-Upgrade bei Fővárosi Vízművek (3.1 → 7.0); Upgrade und Erweiterung bei Coop Hungary (3.0B → 3.5); kompletter BW/4HANA-Neuaufbau bei Palkeet mit aDSOs und CompositeProvidern; Konsolidierung der Divisions-Warehouses in das Novartis-Konzern-DWH."
+},
+"hu": {
+"nav.about": "Rólam",
+"nav.skills": "Szakterületek",
+"nav.projects": "Projektek",
+"nav.clients": "Ügyfelek",
+"nav.cta": "Kapcsolatfelvétel",
+"sub.back": "Vissza az áttekintéshez",
+"sub.eyebrow": "Szakterületek",
+"sub.cta1": "Beszéljünk a projektjéről",
+"sub.cta2": "Összes szakterület",
+"s.title": "Migrációk és upgrade-ek",
+"s.lede": "A rendszerek továbbléptetése úgy, hogy a riporting egyetlen napra se álljon le – release-upgrade-ek, BW/4HANA-konverziók és az S/4HANA, BDC és DataSphere felé vezető út.",
+"s.cap": "Egyetlen folytonos út: a SAP BI minden generációja, éles környezetben migrálva.",
+"s.b1t": "Előbb stratégia, aztán eszköz",
+"s.b1p": "Greenfield, brownfield vagy shell-konverzió – a helyes megközelítés az adatminőségtől, az egyedi fejlesztésektől és az üzlet változási hajlandóságától függ. Először a rendszert mérem fel, és az eredmények döntik el a stratégiát – nem fordítva.",
+"s.b2t": "Kockázatcsökkentés tervezetten",
+"s.b2p": "Párhuzamos üzem, automatizált egyeztető riportok és begyakorolt cutover-terv: a migráció az előkészítésben dől el. Az üzleti felhasználóknak a javulást kell észrevenniük – nem a migrációt.",
+"s.b3t": "A felhő-horizont",
+"s.b3p": "A jelenlegi fejezet: az S/4HANA mint új forrásrendszer bevezetésének összehangolása, a SAP Business Data Cloud upgrade és a DataSphere-migráció előkészítése – több szál, egyetlen konzisztens célarchitektúra.",
+"s.b4t": "A gyakorlatban",
+"s.b4p": "Funkcionálisan azonos BW-upgrade a Fővárosi Vízműveknél (3.1 → 7.0); upgrade és bővítés a Coop Hungarynál (3.0B → 3.5); teljes BW/4HANA-újraépítés a Palkeetnél aDSO-kkal és CompositeProviderekkel; a divíziós adattárházak konszolidálása a Novartis csoportszintű adattárházába."
+}
+};
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

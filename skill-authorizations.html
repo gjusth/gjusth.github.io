@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Authorizations — Gergely Justh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav id="nav" class="scrolled">
+  <div class="wrap">
+    <a class="logo" href="index.html"><b>&gt;</b> justh.net</a>
+    <div class="nav-links">
+      <a href="index.html#about" data-i18n="nav.about">About</a>
+      <a href="index.html#skills" data-i18n="nav.skills">Skillset</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="index.html#clients" data-i18n="nav.clients">Clients</a>
+      <a class="btn" href="mailto:gjusth@gmail.com" data-i18n="nav.cta">Get in touch</a>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="hu">HU</button>
+    </div>
+  </div>
+</nav>
+
+<div class="subhero">
+  <div class="wrap">
+    <a class="back-link" href="index.html#skills" data-i18n="sub.back">Back to overview</a>
+    <br>
+    <span class="eyebrow" data-i18n="sub.eyebrow">Skillset</span>
+    <h1 data-i18n="s.title">Authorizations</h1>
+    <p class="lede" data-i18n="s.lede">Authorization concepts that scale with the organisation — from characteristic-level analysis authorizations to a custom cockpit managing multiple auth-relevant dimensions.</p>
+    <div class="tags"><span>Analysis authorizations</span><span>RSECADMIN</span><span>Custom cockpit</span><span>Hierarchy authorizations</span><span>Field-level auth</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <figure class="diagram-card reveal">
+    <svg viewBox="0 0 940 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cockpit-based authorization concept">
+<defs>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7686A0"/></marker>
+<marker id="arrA" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1E4FDB"/></marker>
+</defs>
+<rect x="20" y="20" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="43" class="dg-title" text-anchor="middle">REGION</text><text x="110" y="62" class="dg-label-soft" text-anchor="middle">dimension</text>
+<rect x="20" y="90" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="113" class="dg-title" text-anchor="middle">COMPANY CODE</text><text x="110" y="132" class="dg-label-soft" text-anchor="middle">dimension</text>
+<rect x="20" y="160" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="183" class="dg-title" text-anchor="middle">COST CENTER</text><text x="110" y="202" class="dg-label-soft" text-anchor="middle">dimension</text>
+<rect x="20" y="230" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="253" class="dg-title" text-anchor="middle">DATA DOMAIN</text><text x="110" y="272" class="dg-label-soft" text-anchor="middle">dimension</text>
+<path class="dg-arrow" d="M200,47 H235 V125 H272"/>
+<path class="dg-arrow" d="M200,117 H240 V143 H272"/>
+<path class="dg-arrow" d="M200,187 H240 V163 H272"/>
+<path class="dg-arrow" d="M200,257 H235 V181 H272"/>
+<rect x="280" y="85" width="240" height="130" rx="10" class="dg-box-accent"/><text x="400" y="125" class="dg-title" text-anchor="middle">AUTH COCKPIT</text><text x="400" y="150" class="dg-label-accent" text-anchor="middle">custom-built</text><text x="400" y="170" class="dg-label-accent" text-anchor="middle">single point of maintenance</text>
+<path class="dg-arrow-accent" d="M520,150 H570"/>
+<rect x="570" y="85" width="190" height="130" rx="10" class="dg-box"/><text x="665" y="125" class="dg-title" text-anchor="middle">GENERATED</text><text x="665" y="150" class="dg-label-soft" text-anchor="middle">analysis authorizations</text><text x="665" y="170" class="dg-label-soft" text-anchor="middle">RSECADMIN</text>
+<path class="dg-arrow-accent" d="M760,150 H800"/>
+<rect x="800" y="85" width="120" height="130" rx="10" class="dg-box-dark"/><text x="860" y="140" class="dg-label-light" text-anchor="middle">QUERY</text><text x="860" y="160" class="dg-label-light" text-anchor="middle">RUNTIME</text>
+<text x="470" y="325" class="dg-label-soft" text-anchor="middle">business-maintained dimensions → generated authorizations → enforced everywhere</text>
+</svg>
+    <figcaption data-i18n="s.cap">The custom cockpit: business-maintained dimensions, generated analysis authorizations, runtime enforcement.</figcaption>
+  </figure>
+
+  <div class="content-blocks">
+    <div class="content-block reveal">
+      <div class="num">01</div>
+      <h3 data-i18n="s.b1t">BW is different</h3>
+      <p data-i18n="s.b1p">Reporting security is more than roles: analysis authorizations restrict at characteristic, hierarchy-node and key-figure level — and must hold consistently across queries, planning functions and every frontend.</p>
+    </div>
+    <div class="content-block reveal d1">
+      <div class="num">02</div>
+      <h3 data-i18n="s.b2t">Many dimensions, one model</h3>
+      <p data-i18n="s.b2p">Region, company code, cost center, data domain — real organisations restrict along several dimensions at once. Modelled naively, the combinations explode; modelled well, they stay maintainable.</p>
+    </div>
+    <div class="content-block reveal">
+      <div class="num">03</div>
+      <h3 data-i18n="s.b3t">Governed and auditable</h3>
+      <p data-i18n="s.b3p">Generated rather than hand-maintained authorizations are transparent by construction: every value traceable to a business decision, every change documented — a natural fit for regulated environments.</p>
+    </div>
+    <div class="content-block full reveal d1">
+      <div class="num">04</div>
+      <h3 data-i18n="s.b4t">In practice: the authorization cockpit</h3>
+      <p data-i18n="s.b4p">I designed and built a custom cockpit-based authorization concept: business owners maintain multiple auth-relevant dimensions in a single interface, and the corresponding analysis authorizations are generated automatically — consistent, auditable and dramatically cheaper to administer. Field-level authorization design goes back as far as my Coop Hungary project.</p>
+    </div>
+  </div>
+
+  <div class="sub-cta">
+    <a class="btn" href="mailto:gjusth@gmail.com" data-i18n="sub.cta1">Discuss your project</a>
+    <a class="btn ghost" href="index.html#skills" data-i18n="sub.cta2">All skills</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Gergely Justh · justh.net</span>
+    <span>SAP BI · BW/4HANA · Planning · BusinessObjects</span>
+  </div>
+</footer>
+
+<script>
+window.I18N = {
+"en": {},
+"de": {
+"nav.about": "Über mich",
+"nav.skills": "Kompetenzen",
+"nav.projects": "Projekte",
+"nav.clients": "Referenzen",
+"nav.cta": "Kontakt aufnehmen",
+"sub.back": "Zurück zur Übersicht",
+"sub.eyebrow": "Kompetenzen",
+"sub.cta1": "Projekt besprechen",
+"sub.cta2": "Alle Kompetenzen",
+"s.title": "Berechtigungen",
+"s.lede": "Berechtigungskonzepte, die mit der Organisation skalieren – von Analyseberechtigungen auf Merkmalsebene bis zu einem eigenen Cockpit für mehrere berechtigungsrelevante Dimensionen.",
+"s.cap": "Das eigene Cockpit: fachlich gepflegte Dimensionen, generierte Analyseberechtigungen, Durchsetzung zur Laufzeit.",
+"s.b1t": "BW ist anders",
+"s.b1p": "Reporting-Sicherheit ist mehr als Rollen: Analyseberechtigungen schränken auf Merkmals-, Hierarchieknoten- und Kennzahlenebene ein – und müssen konsistent über Queries, Planungsfunktionen und jedes Frontend hinweg gelten.",
+"s.b2t": "Viele Dimensionen, ein Modell",
+"s.b2p": "Region, Buchungskreis, Kostenstelle, Datendomäne – reale Organisationen schränken entlang mehrerer Dimensionen gleichzeitig ein. Naiv modelliert explodieren die Kombinationen; gut modelliert bleiben sie wartbar.",
+"s.b3t": "Kontrolliert und auditierbar",
+"s.b3p": "Generierte statt handgepflegte Berechtigungen sind per Konstruktion transparent: jeder Wert ist auf eine fachliche Entscheidung zurückführbar, jede Änderung dokumentiert – ideal für regulierte Umgebungen.",
+"s.b4t": "In der Praxis: das Berechtigungs-Cockpit",
+"s.b4p": "Ich habe ein eigenes cockpitbasiertes Berechtigungskonzept entworfen und umgesetzt: Fachverantwortliche pflegen mehrere berechtigungsrelevante Dimensionen in einer einzigen Oberfläche, die zugehörigen Analyseberechtigungen werden automatisch generiert – konsistent, auditierbar und deutlich günstiger zu administrieren. Berechtigungen auf Feldebene habe ich bereits bei Coop Hungary umgesetzt."
+},
+"hu": {
+"nav.about": "Rólam",
+"nav.skills": "Szakterületek",
+"nav.projects": "Projektek",
+"nav.clients": "Ügyfelek",
+"nav.cta": "Kapcsolatfelvétel",
+"sub.back": "Vissza az áttekintéshez",
+"sub.eyebrow": "Szakterületek",
+"sub.cta1": "Beszéljünk a projektjéről",
+"sub.cta2": "Összes szakterület",
+"s.title": "Jogosultságok",
+"s.lede": "A szervezettel együtt skálázódó jogosultsági koncepciók – a jellemzőszintű elemzési jogosultságoktól egy saját cockpitig, amely több jogosultsági dimenziót kezel.",
+"s.cap": "A saját cockpit: üzletileg karbantartott dimenziók, generált elemzési jogosultságok, futásidejű érvényesítés.",
+"s.b1t": "A BW más",
+"s.b1p": "A riporting-biztonság több mint szerepkörök: az elemzési jogosultságok jellemző-, hierarchiacsomópont- és mutatószám-szinten korlátoznak – és konzisztensen kell érvényesülniük a lekérdezésekben, a tervezési funkciókban és minden frontendben.",
+"s.b2t": "Sok dimenzió, egy modell",
+"s.b2p": "Régió, vállalatkód, költséghely, adatdomén – a valós szervezetek egyszerre több dimenzió mentén korlátoznak. Naivan modellezve a kombinációk elszabadulnak; jól modellezve karbantarthatóak maradnak.",
+"s.b3t": "Kontrollált és auditálható",
+"s.b3p": "A generált – nem kézzel karbantartott – jogosultságok felépítésüknél fogva átláthatóak: minden érték visszavezethető egy üzleti döntésre, minden változás dokumentált – ideális szabályozott környezetekhez.",
+"s.b4t": "A gyakorlatban: a jogosultsági cockpit",
+"s.b4p": "Saját, cockpit-alapú jogosultsági koncepciót terveztem és valósítottam meg: az üzleti felelősök egyetlen felületen tartanak karban több jogosultsági dimenziót, a hozzájuk tartozó elemzési jogosultságok pedig automatikusan generálódnak – konzisztensen, auditálhatóan és lényegesen olcsóbb adminisztrációval. Mezőszintű jogosultságokat már a Coop Hungary projektben is megvalósítottam."
+}
+};
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>
