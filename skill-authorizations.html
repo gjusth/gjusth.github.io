@@ -47,10 +47,10 @@
 <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7686A0"/></marker>
 <marker id="arrA" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1E4FDB"/></marker>
 </defs>
-<rect x="20" y="20" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="43" class="dg-title" text-anchor="middle">REGION</text><text x="110" y="62" class="dg-label-soft" text-anchor="middle">dimension</text>
-<rect x="20" y="90" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="113" class="dg-title" text-anchor="middle">COMPANY CODE</text><text x="110" y="132" class="dg-label-soft" text-anchor="middle">dimension</text>
-<rect x="20" y="160" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="183" class="dg-title" text-anchor="middle">COST CENTER</text><text x="110" y="202" class="dg-label-soft" text-anchor="middle">dimension</text>
-<rect x="20" y="230" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="253" class="dg-title" text-anchor="middle">DATA DOMAIN</text><text x="110" y="272" class="dg-label-soft" text-anchor="middle">dimension</text>
+<rect x="20" y="20" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="43" class="dg-title" text-anchor="middle">ENTITY</text><text x="110" y="62" class="dg-label-soft" text-anchor="middle">dimension</text>
+<rect x="20" y="90" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="113" class="dg-title" text-anchor="middle">REGION</text><text x="110" y="132" class="dg-label-soft" text-anchor="middle">dimension</text>
+<rect x="20" y="160" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="183" class="dg-title" text-anchor="middle">MARKET</text><text x="110" y="202" class="dg-label-soft" text-anchor="middle">dimension</text>
+<rect x="20" y="230" width="180" height="55" rx="10" class="dg-box"/><text x="110" y="253" class="dg-title" text-anchor="middle">LOCAL / CONSOLIDATED</text><text x="110" y="272" class="dg-label-soft" text-anchor="middle">custom dimension</text>
 <path class="dg-arrow" d="M200,47 H235 V125 H272"/>
 <path class="dg-arrow" d="M200,117 H240 V143 H272"/>
 <path class="dg-arrow" d="M200,187 H240 V163 H272"/>
@@ -74,7 +74,7 @@
     <div class="content-block reveal d1">
       <div class="num">02</div>
       <h3 data-i18n="s.b2t">Many dimensions, one model</h3>
-      <p data-i18n="s.b2p">Region, company code, cost center, data domain — real organisations restrict along several dimensions at once. Modelled naively, the combinations explode; modelled well, they stay maintainable.</p>
+      <p data-i18n="s.b2p">Entity, region, market, local versus consolidated view — real organisations restrict along several dimensions at once. Modelled naively, the combinations explode; modelled well, they stay maintainable.</p>
     </div>
     <div class="content-block reveal">
       <div class="num">03</div>
@@ -120,7 +120,7 @@ window.I18N = {
 "s.b1t": "BW ist anders",
 "s.b1p": "Reporting-Sicherheit ist mehr als Rollen: Analyseberechtigungen schränken auf Merkmals-, Hierarchieknoten- und Kennzahlenebene ein – und müssen konsistent über Queries, Planungsfunktionen und jedes Frontend hinweg gelten.",
 "s.b2t": "Viele Dimensionen, ein Modell",
-"s.b2p": "Region, Buchungskreis, Kostenstelle, Datendomäne – reale Organisationen schränken entlang mehrerer Dimensionen gleichzeitig ein. Naiv modelliert explodieren die Kombinationen; gut modelliert bleiben sie wartbar.",
+"s.b2p": "Entität, Region, Markt, lokale versus konsolidierte Sicht – reale Organisationen schränken entlang mehrerer Dimensionen gleichzeitig ein. Naiv modelliert explodieren die Kombinationen; gut modelliert bleiben sie wartbar.",
 "s.b3t": "Kontrolliert und auditierbar",
 "s.b3p": "Generierte statt handgepflegte Berechtigungen sind per Konstruktion transparent: jeder Wert ist auf eine fachliche Entscheidung zurückführbar, jede Änderung dokumentiert – ideal für regulierte Umgebungen.",
 "s.b4t": "In der Praxis: das Berechtigungs-Cockpit",
@@ -142,7 +142,7 @@ window.I18N = {
 "s.b1t": "A BW más",
 "s.b1p": "A riporting-biztonság több mint szerepkörök: az elemzési jogosultságok jellemző-, hierarchiacsomópont- és mutatószám-szinten korlátoznak – és konzisztensen kell érvényesülniük a lekérdezésekben, a tervezési funkciókban és minden frontendben.",
 "s.b2t": "Sok dimenzió, egy modell",
-"s.b2p": "Régió, vállalatkód, költséghely, adatdomén – a valós szervezetek egyszerre több dimenzió mentén korlátoznak. Naivan modellezve a kombinációk elszabadulnak; jól modellezve karbantarthatóak maradnak.",
+"s.b2p": "Entitás, régió, piac, lokális versus konszolidált nézet – a valós szervezetek egyszerre több dimenzió mentén korlátoznak. Naivan modellezve a kombinációk elszabadulnak; jól modellezve karbantarthatóak maradnak.",
 "s.b3t": "Kontrollált és auditálható",
 "s.b3p": "A generált – nem kézzel karbantartott – jogosultságok felépítésüknél fogva átláthatóak: minden érték visszavezethető egy üzleti döntésre, minden változás dokumentált – ideális szabályozott környezetekhez.",
 "s.b4t": "A gyakorlatban: a jogosultsági cockpit",
