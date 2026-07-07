@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Programming — Gergely Justh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav id="nav" class="scrolled">
+  <div class="wrap">
+    <a class="logo" href="index.html"><b>&gt;</b> justh.net</a>
+    <div class="nav-links">
+      <a href="index.html#about" data-i18n="nav.about">About</a>
+      <a href="index.html#skills" data-i18n="nav.skills">Skillset</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="index.html#clients" data-i18n="nav.clients">Clients</a>
+      <a class="btn" href="mailto:gjusth@gmail.com" data-i18n="nav.cta">Get in touch</a>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="hu">HU</button>
+    </div>
+  </div>
+</nav>
+
+<div class="subhero">
+  <div class="wrap">
+    <a class="back-link" href="index.html#skills" data-i18n="sub.back">Back to overview</a>
+    <br>
+    <span class="eyebrow" data-i18n="sub.eyebrow">Skillset</span>
+    <h1 data-i18n="s.title">Programming</h1>
+    <p class="lede" data-i18n="s.lede">Above-average programming depth for a BI architect — ABAP, SQL and AMDP used deliberately, each where it is strongest.</p>
+    <div class="tags"><span>ABAP OO</span><span>SQL</span><span>AMDP / SQLScript</span><span>CDS</span><span>Code pushdown</span><span>User exits</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <figure class="diagram-card reveal">
+    <svg viewBox="0 0 940 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Code pushdown: ABAP, SQL and AMDP">
+<defs>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7686A0"/></marker>
+<marker id="arrA" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#1E4FDB"/></marker>
+</defs>
+<rect x="50" y="30" width="530" height="90" rx="10" class="dg-box"/><text x="315" y="62" class="dg-title" text-anchor="middle">APPLICATION SERVER</text><text x="315" y="85" class="dg-label-soft" text-anchor="middle">classic ABAP · loops over internal tables · row by row</text><text x="315" y="103" class="dg-label-soft" text-anchor="middle">data-to-code</text>
+<path class="dg-arrow-accent" d="M315,120 V185"/>
+<text x="430" y="158" class="dg-label-accent" text-anchor="middle">CODE PUSHDOWN</text>
+<rect x="50" y="190" width="530" height="100" rx="10" class="dg-box-accent"/><text x="315" y="222" class="dg-title" text-anchor="middle">SAP HANA DATABASE</text><text x="315" y="245" class="dg-label-accent" text-anchor="middle">SQL · CDS · SQLScript / AMDP</text><text x="315" y="266" class="dg-label-soft" text-anchor="middle">joins, aggregation, parallel execution — in the database</text>
+<path class="dg-arrow-accent" d="M580,240 H650"/>
+<rect x="650" y="175" width="250" height="130" rx="10" class="dg-box-dark"/>
+<text x="775" y="228" text-anchor="middle" fill="#E8A33D" style="font-family:Archivo,sans-serif;font-weight:800;font-size:42px">80%+</text>
+<text x="775" y="255" class="dg-label-light" text-anchor="middle">faster processing</text><text x="775" y="275" class="dg-label-light" text-anchor="middle">Stada tax allocation</text>
+</svg>
+    <figcaption data-i18n="s.cap">Code pushdown: moving logic from the application server into the HANA database.</figcaption>
+  </figure>
+
+  <div class="content-blocks">
+    <div class="content-block reveal">
+      <div class="num">01</div>
+      <h3 data-i18n="s.b1t">Three languages, one toolbox</h3>
+      <p data-i18n="s.b1p">ABAP runs on the application server and excels at orchestration, interfaces and business logic. SQL is set-based and lives in the database. AMDP — ABAP-Managed Database Procedures — bridges the two: SQLScript written and versioned inside ABAP classes, executed natively in HANA.</p>
+    </div>
+    <div class="content-block reveal d1">
+      <div class="num">02</div>
+      <h3 data-i18n="s.b2t">Code pushdown</h3>
+      <p data-i18n="s.b2p">Classic ABAP pulls data to the code: loops over internal tables, row by row. The HANA paradigm pushes code to the data: joins, aggregations and calculations run in parallel inside the database, eliminating costly round trips.</p>
+    </div>
+    <div class="content-block reveal">
+      <div class="num">03</div>
+      <h3 data-i18n="s.b3t">The right tool for each job</h3>
+      <p data-i18n="s.b3p">Process control, authorizations and interfaces stay in ABAP. Straightforward reads belong in SQL and CDS views. Complex, mass-data transformations — in BW transformation routines or planning functions — are AMDP territory.</p>
+    </div>
+    <div class="content-block full reveal d1">
+      <div class="num">04</div>
+      <h3 data-i18n="s.b4t">In practice: 80%+ faster at Stada</h3>
+      <p data-i18n="s.b4p">I reimplemented a grown ABAP / BI-IP solution for tax-driven cost allocations as a fully HANA-based model with complex AMDP procedures — achieving more than 80% gain in processing speed while making the logic markedly more flexible to extend.</p>
+    </div>
+  </div>
+
+  <div class="sub-cta">
+    <a class="btn" href="mailto:gjusth@gmail.com" data-i18n="sub.cta1">Discuss your project</a>
+    <a class="btn ghost" href="index.html#skills" data-i18n="sub.cta2">All skills</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Gergely Justh · justh.net</span>
+    <span>SAP BI · BW/4HANA · Planning · BusinessObjects</span>
+  </div>
+</footer>
+
+<script>
+window.I18N = {
+"en": {},
+"de": {
+"nav.about": "Über mich",
+"nav.skills": "Kompetenzen",
+"nav.projects": "Projekte",
+"nav.clients": "Referenzen",
+"nav.cta": "Kontakt aufnehmen",
+"sub.back": "Zurück zur Übersicht",
+"sub.eyebrow": "Kompetenzen",
+"sub.cta1": "Projekt besprechen",
+"sub.cta2": "Alle Kompetenzen",
+"s.title": "Programmierung",
+"s.lede": "Überdurchschnittliche Programmiertiefe für einen BI-Architekten – ABAP, SQL und AMDP gezielt dort eingesetzt, wo sie am stärksten sind.",
+"s.cap": "Code Pushdown: Die Logik wandert vom Applikationsserver in die HANA-Datenbank.",
+"s.b1t": "Drei Sprachen, ein Werkzeugkasten",
+"s.b1p": "ABAP läuft auf dem Applikationsserver und glänzt bei Orchestrierung, Schnittstellen und Geschäftslogik. SQL ist mengenbasiert und lebt in der Datenbank. AMDP – ABAP-Managed Database Procedures – verbindet beides: SQLScript, geschrieben und versioniert in ABAP-Klassen, nativ ausgeführt in HANA.",
+"s.b2t": "Code Pushdown",
+"s.b2p": "Klassisches ABAP holt die Daten zum Code: Schleifen über interne Tabellen, Zeile für Zeile. Das HANA-Paradigma bringt den Code zu den Daten: Joins, Aggregationen und Berechnungen laufen parallel in der Datenbank – ohne teure Roundtrips.",
+"s.b3t": "Das richtige Werkzeug für jede Aufgabe",
+"s.b3p": "Prozesssteuerung, Berechtigungen und Schnittstellen bleiben in ABAP. Einfache Lesezugriffe gehören in SQL und CDS Views. Komplexe Massendaten-Transformationen – in BW-Transformationsroutinen oder Planungsfunktionen – sind AMDP-Territorium.",
+"s.b4t": "In der Praxis: über 80 % schneller bei Stada",
+"s.b4p": "Ich habe eine gewachsene ABAP-/BI-IP-Lösung für steuergetriebene Kostenallokationen als vollständig HANA-basiertes Modell mit komplexen AMDP-Prozeduren neu implementiert – mit über 80 % Gewinn an Verarbeitungsgeschwindigkeit und deutlich flexiblerer, leichter erweiterbarer Logik."
+},
+"hu": {
+"nav.about": "Rólam",
+"nav.skills": "Szakterületek",
+"nav.projects": "Projektek",
+"nav.clients": "Ügyfelek",
+"nav.cta": "Kapcsolatfelvétel",
+"sub.back": "Vissza az áttekintéshez",
+"sub.eyebrow": "Szakterületek",
+"sub.cta1": "Beszéljünk a projektjéről",
+"sub.cta2": "Összes szakterület",
+"s.title": "Programozás",
+"s.lede": "Átlagon felüli programozási mélység BI-architektként – ABAP, SQL és AMDP tudatosan ott bevetve, ahol a legerősebbek.",
+"s.cap": "Code pushdown: a logika az alkalmazásszerverről a HANA-adatbázisba költözik.",
+"s.b1t": "Három nyelv, egy eszköztár",
+"s.b1p": "Az ABAP az alkalmazásszerveren fut, és az orkesztrációban, az interfészekben és az üzleti logikában erős. Az SQL halmazalapú, és az adatbázisban él. Az AMDP – ABAP-Managed Database Procedures – összeköti a kettőt: ABAP-osztályokban írt és verziózott SQLScript, natívan a HANA-ban végrehajtva.",
+"s.b2t": "Code pushdown",
+"s.b2p": "A klasszikus ABAP az adatot viszi a kódhoz: ciklusok belső táblákon, sorról sorra. A HANA-paradigma a kódot viszi az adathoz: a joinok, aggregációk és számítások párhuzamosan futnak az adatbázisban – költséges oda-vissza utak nélkül.",
+"s.b3t": "Minden feladathoz a megfelelő eszköz",
+"s.b3p": "A folyamatvezérlés, a jogosultságok és az interfészek ABAP-ban maradnak. Az egyszerű olvasások SQL-be és CDS view-kba valók. Az összetett, tömeges adattranszformációk – BW-transzformációs rutinokban vagy tervezési funkciókban – az AMDP terepe.",
+"s.b4t": "A gyakorlatban: 80%-nál nagyobb gyorsulás a Stadánál",
+"s.b4p": "Egy megörökölt, adószabály-vezérelt költségallokációkat végző ABAP/BI-IP megoldást teljesen HANA-alapú modellként implementáltam újra, összetett AMDP-eljárásokkal – több mint 80% feldolgozásisebesség-nyereséggel és lényegesen rugalmasabb, könnyebben bővíthető logikával."
+}
+};
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>
