@@ -89,7 +89,7 @@
     var nodes = timeline.querySelectorAll('.tl-node');
 
     var snakeSvg = null, snakeFill = null, snakeTotal = 0;
-    var pts = [], cum = [];
+    var pts = [];
 
     function buildSnake(){
       var active = window.innerWidth >= 1100;
@@ -108,19 +108,37 @@
       var tr = timeline.getBoundingClientRect();
       snakeSvg.setAttribute('width', tr.width);
       snakeSvg.setAttribute('height', tr.height);
-      pts = []; cum = [0];
+      pts = []; var nodeCum = [];
+      var prev = null, len = 0, d = '';
       nodes.forEach(function(n){
         var r = n.getBoundingClientRect();
-        pts.push({x: r.left - tr.left + 9, y: r.top - tr.top + 9});
+        var c = {x: r.left - tr.left + 9, y: r.top - tr.top + 9};
+        if(!prev){
+          d = 'M ' + c.x.toFixed(1) + ' ' + c.y.toFixed(1);
+          pts.push(c); nodeCum.push(0);
+        } else if(Math.abs(c.y - prev.y) < 2){
+          /* same row: straight horizontal segment */
+          d += ' L ' + c.x.toFixed(1) + ' ' + c.y.toFixed(1);
+          len += Math.abs(c.x - prev.x);
+          pts.push(c); nodeCum.push(len);
+        } else {
+          /* new row: short drop, run back horizontally in the row gap, drop into the node */
+          var midY = c.y - 24;
+          var w1 = {x: prev.x, y: midY}, w2 = {x: c.x, y: midY};
+          d += ' L ' + w1.x.toFixed(1) + ' ' + w1.y.toFixed(1);
+          len += (midY - prev.y);
+          d += ' L ' + w2.x.toFixed(1) + ' ' + w2.y.toFixed(1);
+          len += Math.abs(w2.x - w1.x);
+          d += ' L ' + c.x.toFixed(1) + ' ' + c.y.toFixed(1);
+          len += (c.y - midY);
+          pts.push(w1); pts.push(w2); pts.push(c); nodeCum.push(len);
+        }
+        prev = c;
       });
-      var d = '';
-      for(var i=0;i<pts.length;i++){
-        d += (i ? ' L ' : 'M ') + pts[i].x.toFixed(1) + ' ' + pts[i].y.toFixed(1);
-        if(i){ cum.push(cum[i-1] + Math.abs(pts[i].x-pts[i-1].x) + Math.abs(pts[i].y-pts[i-1].y)); }
-      }
+      timeline._nodeCum = nodeCum;
       snakeSvg.querySelector('.snake-base').setAttribute('d', d);
       snakeFill.setAttribute('d', d);
-      snakeTotal = cum[cum.length-1];
+      snakeTotal = len;
       snakeFill.style.strokeDasharray = snakeTotal;
       onScrollTimeline();
     }
@@ -144,8 +162,9 @@
           }
         }
         snakeFill.style.strokeDashoffset = snakeTotal - reveal;
+        var nc = timeline._nodeCum || [];
         items.forEach(function(item, idx){
-          item.classList.toggle('lit', cum[idx] <= reveal + 1);
+          item.classList.toggle('lit', nc[idx] !== undefined && nc[idx] <= reveal + 1);
         });
       } else {
         railFill.style.height = progressY + 'px';

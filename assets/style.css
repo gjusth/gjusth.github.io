@@ -225,11 +225,8 @@ a.skill:hover .more::after{transform:translateX(4px)}
   .timeline{display:grid;grid-template-columns:1fr 1fr;column-gap:64px}
   .tl-rail,.tl-rail-fill{display:none}
   #snakeSvg{display:block}
-  .tl-item{padding:36px 0 44px 36px;text-align:left}
+  .tl-item{padding:36px 0 48px 36px;text-align:left}
   .tl-node{left:0;top:0}
-  /* snake order: row 1 left→right, row 2 right→left, ... */
-  .tl-item:nth-child(4n),.tl-item:nth-child(4n+1){grid-column:2}
-  .tl-item:nth-child(4n+2),.tl-item:nth-child(4n+3){grid-column:1}
 }
 
 /* ---------- clients ---------- */
