@@ -81,24 +81,88 @@
     } else { counters.forEach(animateCount); }
   }
 
-  /* ---------- timeline rail ---------- */
+  /* ---------- timeline: vertical rail (mobile) + snake path (wide) ---------- */
   var timeline = document.getElementById('timeline');
   if(timeline){
     var railFill = document.getElementById('railFill');
     var items = timeline.querySelectorAll('.tl-item');
+    var nodes = timeline.querySelectorAll('.tl-node');
+
+    var snakeSvg = null, snakeFill = null, snakeTotal = 0;
+    var pts = [], cum = [];
+
+    function buildSnake(){
+      var active = window.innerWidth >= 1100;
+      if(!snakeSvg){
+        snakeSvg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+        snakeSvg.id = 'snakeSvg';
+        var base = document.createElementNS('http://www.w3.org/2000/svg','path');
+        base.setAttribute('class','snake-base');
+        snakeFill = document.createElementNS('http://www.w3.org/2000/svg','path');
+        snakeFill.setAttribute('class','snake-fill');
+        snakeSvg.appendChild(base); snakeSvg.appendChild(snakeFill);
+        timeline.insertBefore(snakeSvg, timeline.firstChild);
+      }
+      if(!active){ snakeSvg.style.display = 'none'; pts = []; onScrollTimeline(); return; }
+      snakeSvg.style.display = 'block';
+      var tr = timeline.getBoundingClientRect();
+      snakeSvg.setAttribute('width', tr.width);
+      snakeSvg.setAttribute('height', tr.height);
+      pts = []; cum = [0];
+      nodes.forEach(function(n){
+        var r = n.getBoundingClientRect();
+        pts.push({x: r.left - tr.left + 9, y: r.top - tr.top + 9});
+      });
+      var d = '';
+      for(var i=0;i<pts.length;i++){
+        d += (i ? ' L ' : 'M ') + pts[i].x.toFixed(1) + ' ' + pts[i].y.toFixed(1);
+        if(i){ cum.push(cum[i-1] + Math.abs(pts[i].x-pts[i-1].x) + Math.abs(pts[i].y-pts[i-1].y)); }
+      }
+      snakeSvg.querySelector('.snake-base').setAttribute('d', d);
+      snakeFill.setAttribute('d', d);
+      snakeTotal = cum[cum.length-1];
+      snakeFill.style.strokeDasharray = snakeTotal;
+      onScrollTimeline();
+    }
+
     var onScrollTimeline = function(){
       var rect = timeline.getBoundingClientRect();
       var trigger = window.innerHeight * 0.62;
-      var progress = Math.min(Math.max(trigger - rect.top, 0), rect.height);
-      railFill.style.height = progress + 'px';
-      items.forEach(function(item){
-        var r = item.getBoundingClientRect();
-        item.classList.toggle('lit', r.top < trigger);
-      });
+      var progressY = Math.min(Math.max(trigger - rect.top, 0), rect.height);
+
+      if(pts.length > 1){
+        /* reveal path length up to progressY (path only moves right/left/down) */
+        var reveal = 0;
+        for(var i=1;i<pts.length;i++){
+          var a = pts[i-1], b = pts[i];
+          if(a.x !== b.x){                    /* horizontal segment */
+            if(progressY >= a.y) reveal += Math.abs(b.x-a.x); else break;
+          } else {                            /* vertical segment */
+            if(progressY >= b.y) reveal += (b.y-a.y);
+            else if(progressY > a.y){ reveal += (progressY-a.y); break; }
+            else break;
+          }
+        }
+        snakeFill.style.strokeDashoffset = snakeTotal - reveal;
+        items.forEach(function(item, idx){
+          item.classList.toggle('lit', cum[idx] <= reveal + 1);
+        });
+      } else {
+        railFill.style.height = progressY + 'px';
+        items.forEach(function(item){
+          var r = item.getBoundingClientRect();
+          item.classList.toggle('lit', r.top < trigger);
+        });
+      }
     };
+
     window.addEventListener('scroll', onScrollTimeline, {passive:true});
-    window.addEventListener('resize', onScrollTimeline);
-    onScrollTimeline();
+    window.addEventListener('resize', buildSnake);
+    if('ResizeObserver' in window){
+      new ResizeObserver(function(){ buildSnake(); }).observe(timeline);
+    }
+    window.addEventListener('load', buildSnake);
+    buildSnake();
   }
 
   /* ---------- hero node network ---------- */

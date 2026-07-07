@@ -218,15 +218,18 @@ a.skill:hover .more::after{transform:translateX(4px)}
 .tl-item h3{font-family:var(--font-display);font-variation-settings:"wdth" 108;font-weight:750;font-size:21px;margin-bottom:6px}
 .tl-item p{font-size:14.5px;color:var(--ink-soft);max-width:680px}
 
+#snakeSvg{display:none;position:absolute;inset:0;pointer-events:none;overflow:visible;z-index:1}
+#snakeSvg .snake-base{fill:none;stroke:var(--line);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+#snakeSvg .snake-fill{fill:none;stroke:var(--cobalt);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
 @media(min-width:1100px){
-  .timeline{display:grid;grid-template-columns:1fr 1fr}
-  .tl-rail,.tl-rail-fill{left:calc(50% - 1px)}
-  .tl-item{padding:0 0 56px 60px}
-  .tl-item:nth-child(odd){padding:0 60px 56px 0;text-align:right}
-  .tl-item:nth-child(odd) .tl-meta{justify-content:flex-end}
-  .tl-item:nth-child(odd) p{margin-left:auto}
-  .tl-item:nth-child(odd) .tl-node{left:auto;right:-9px}
-  .tl-item:nth-child(even) .tl-node{left:-9px}
+  .timeline{display:grid;grid-template-columns:1fr 1fr;column-gap:64px}
+  .tl-rail,.tl-rail-fill{display:none}
+  #snakeSvg{display:block}
+  .tl-item{padding:36px 0 44px 36px;text-align:left}
+  .tl-node{left:0;top:0}
+  /* snake order: row 1 left→right, row 2 right→left, ... */
+  .tl-item:nth-child(4n),.tl-item:nth-child(4n+1){grid-column:2}
+  .tl-item:nth-child(4n+2),.tl-item:nth-child(4n+3){grid-column:1}
 }
 
 /* ---------- clients ---------- */
