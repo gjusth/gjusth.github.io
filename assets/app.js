@@ -122,16 +122,19 @@
           len += Math.abs(c.x - prev.x);
           pts.push(c); nodeCum.push(len);
         } else {
-          /* new row: short drop, run back horizontally in the row gap, drop into the node */
+          /* new row: extend to the right edge, drop down the frame, run back, drop into the node */
           var midY = c.y - 24;
-          var w1 = {x: prev.x, y: midY}, w2 = {x: c.x, y: midY};
+          var xR = tr.width - 9;
+          var w1 = {x: xR, y: prev.y}, w2 = {x: xR, y: midY}, w3 = {x: c.x, y: midY};
           d += ' L ' + w1.x.toFixed(1) + ' ' + w1.y.toFixed(1);
-          len += (midY - prev.y);
+          len += Math.abs(w1.x - prev.x);
           d += ' L ' + w2.x.toFixed(1) + ' ' + w2.y.toFixed(1);
-          len += Math.abs(w2.x - w1.x);
+          len += (midY - prev.y);
+          d += ' L ' + w3.x.toFixed(1) + ' ' + w3.y.toFixed(1);
+          len += Math.abs(w3.x - w2.x);
           d += ' L ' + c.x.toFixed(1) + ' ' + c.y.toFixed(1);
           len += (c.y - midY);
-          pts.push(w1); pts.push(w2); pts.push(c); nodeCum.push(len);
+          pts.push(w1); pts.push(w2); pts.push(w3); pts.push(c); nodeCum.push(len);
         }
         prev = c;
       });

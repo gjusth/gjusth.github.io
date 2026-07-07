@@ -222,7 +222,7 @@ a.skill:hover .more::after{transform:translateX(4px)}
 #snakeSvg .snake-base{fill:none;stroke:var(--line);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
 #snakeSvg .snake-fill{fill:none;stroke:var(--cobalt);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
 @media(min-width:1100px){
-  .timeline{display:grid;grid-template-columns:1fr 1fr;column-gap:64px}
+  .timeline{display:grid;grid-template-columns:1fr 1fr;column-gap:64px;padding-right:34px}
   .tl-rail,.tl-rail-fill{display:none}
   #snakeSvg{display:block}
   .tl-item{padding:36px 0 48px 36px;text-align:left}
